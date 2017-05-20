@@ -6,6 +6,7 @@ package edu.ucr.cutiehack.parkbnb;
 
 public class ParkingSpot {
 
+    public long id;
     public String images;
     public double lat;
     public double lng;
@@ -18,7 +19,8 @@ public class ParkingSpot {
         // Default constructor for DataSnapshot.getValue(ParkingSpot.class)
     }
 
-    public ParkingSpot(String images, double lat, double lng, double price, double rate, boolean taken, String user) {
+    public ParkingSpot(long id, String images, double lat, double lng, double price, double rate, boolean taken, String user) {
+        this.id = id;
         this.images = images;
         this.lat = lat;
         this.lng = lng;
