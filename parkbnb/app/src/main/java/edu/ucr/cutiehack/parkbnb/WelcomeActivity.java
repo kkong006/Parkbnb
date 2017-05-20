@@ -87,7 +87,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+                    jumpToLogin();
                 }
             }
         });
@@ -119,6 +119,11 @@ public class WelcomeActivity extends AppCompatActivity {
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
         startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+        finish();
+    }
+    private void jumpToLogin() {
+        prefManager.setFirstTimeLaunch(false);
+        startActivity(new Intent(WelcomeActivity.this, SignInActivity.class));
         finish();
     }
 
