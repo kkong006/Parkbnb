@@ -5,6 +5,7 @@ package edu.ucr.cutiehack.parkbnb;
  */
 
 public class ParkingSpot {
+
     public long id;
     public String images;
     public double lat;

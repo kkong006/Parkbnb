@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="edu.ucr.cutiehack.parkbnb.ListingsMapActivity">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="edu.ucr.cutiehack.parkbnb.ListingsMapActivity"
+tools:layout="@layout/activity_listings_map">
 
-</android.support.constraint.ConstraintLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/bt_create_listing"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:text="Create Listing"/>
+
+</FrameLayout>
