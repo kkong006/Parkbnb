@@ -3,6 +3,7 @@
     package="edu.ucr.cutiehack.parkbnb">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +24,13 @@
         <activity android:name=".ListingsMapActivity" />
         <activity android:name=".ViewListingActivity" />
         <activity android:name=".WelcomeActivity" />
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB8ZQCbd0We-WKJ2kUxzTw2B8ac1tLxVI0" />
+
+        <activity android:name=".BookedListingMapActivity"></activity>
     </application>
 
 </manifest>

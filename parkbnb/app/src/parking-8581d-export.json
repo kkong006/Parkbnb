@@ -1,0 +1,105 @@
+{
+  "spot" : [ null, {
+    "id" : 1,
+    "images" : "https://firebasestorage.googleapis.com/v0/b/parking-8581d.appspot.com/o/garage_door_inside_view.jpg?alt=media&token=5bccb3f2-85aa-444f-a28f-44cd831fbd23",
+    "lat" : 33.969585,
+    "lng" : -117.331873,
+    "price" : 14,
+    "rate" : 4,
+    "taken" : false,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  }, {
+    "id" : 2,
+    "images" : "http://www.garagedoorhero.com/images/Garage%20Doors.JPG",
+    "lat" : 33.975635,
+    "lng" : -117.329674,
+    "price" : 15,
+    "rate" : 5,
+    "taken" : false,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  }, {
+    "id" : 3,
+    "images" : "http://43u4yf33ox003bfth0aku6h1.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/awesome-garages-qq1nq3qh.jpg",
+    "lat" : 33.977711,
+    "lng" : -117.324625,
+    "price" : 4,
+    "rate" : 1,
+    "taken" : false,
+    "timestamp" : 1484515789329,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  }, {
+    "id" : 4,
+    "images" : "http://43u4yf33ox003bfth0aku6h1.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/awesome-garages-qq1nq3qh.jpg",
+    "lat" : 33.97439,
+    "lng" : -117.332989,
+    "price" : 8,
+    "rate" : 3,
+    "taken" : false,
+    "timestamp" : 1492720912809,
+    "user" : "lgctRqHvqwO4pKCjp2ZJ1bKmCXU2"
+  }, {
+    "id" : 5,
+    "images" : "https://firebasestorage.googleapis.com/v0/b/parking-8581d.appspot.com/o/garage_door_inside_view.jpg?alt=media&token=5bccb3f2-85aa-444f-a28f-44cd831fbd23",
+    "lat" : 33.978094,
+    "lng" : -117.330834,
+    "price" : 25,
+    "rate" : 5,
+    "taken" : false,
+    "timestamp" : 1484634897193,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  }, null, {
+    "id" : 7,
+    "images" : "http://www.12-gaugegarage.com/resources/1023616D.jpg",
+    "lat" : 33.978021,
+    "lng" : -117.332007,
+    "price" : 15,
+    "rate" : 5,
+    "taken" : false,
+    "timestamp" : 1494634447145,
+    "user" : "aDDn6gzJYdQv5erQLl2eX4YUrUT2"
+  }, {
+    "id" : 8,
+    "images" : "https://st.hzcdn.com/simgs/dc411934016f2769_4-9084/contemporary-garage.jpg",
+    "lat" : 33.980055,
+    "lng" : -117.32671,
+    "price" : 5,
+    "rate" : 2,
+    "taken" : false,
+    "timestamp" : 1484772396989,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  }, {
+    "id" : 9,
+    "images" : "https://s-media-cache-ak0.pinimg.com/originals/cc/1d/e3/cc1de396d9df8d6849dac610e82a6b19.jpg",
+    "lat" : 33.978807,
+    "lng" : -117.323194,
+    "price" : 35,
+    "rate" : 5,
+    "taken" : false,
+    "timestamp" : 1484516078958,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  }, {
+    "id" : 10,
+    "images" : "http://www.planitdiy.com/wp-content/uploads/feature-garage1.jpg",
+    "lat" : 33.971225,
+    "lng" : -117.32272,
+    "price" : 18,
+    "rate" : 5,
+    "taken" : false,
+    "timestamp" : 1487246697671,
+    "user" : "lgctRqHvqwO4pKCjp2ZJ1bKmCXU2"
+  }, {
+    "id" : 11,
+    "images" : "http://www.garageliving.com/img/gallery/bright-clean-garage-01.jpg",
+    "lat" : 33.969677,
+    "lng" : -117.327127,
+    "price" : 18,
+    "rate" : 4,
+    "taken" : false,
+    "timestamp" : 1484516445641,
+    "user" : "8eh9IL5yDXeAKtuET9NalQgoATo2"
+  } ],
+  "user" : [ null, {
+    "license" : "9TWO011",
+    "name" : "Alex"
+  } ]
+}
