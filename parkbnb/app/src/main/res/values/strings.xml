@@ -2,8 +2,8 @@
     <string name="app_name">Parkbnb</string>
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
-    <string name="skip">SKIP</string>
-    <string name="start">GOT IT</string>
+    <string name="skip">NEXT</string>
+    <string name="start">SIGN IN</string>
 
     <string name="slide_1_title">Welcome to Parkbnb!</string>
     <string name="slide_1_desc">The easiest way to find a parking spot around!</string>
@@ -20,4 +20,7 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="rentor">Rent spot</string>
+    <string name="get">Get spot</string>
 </resources>
