@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DataSnapshot;
@@ -100,11 +101,10 @@ public class EnterInfo extends AppCompatActivity {
                     ref.child(strSpotNum).child("rate").setValue(rate);
                     ref.child(strSpotNum).child("taken").setValue(false);
 
-
                     ref.child(strSpotNum).child("lat").setValue(lat);
                     ref.child(strSpotNum).child("lng").setValue(lng);
                     //databaseReference.child()
-
+                    Toast.makeText(getApplicationContext(), "Your entry has been saved!", Toast.LENGTH_SHORT).show();
                 }
             }
 

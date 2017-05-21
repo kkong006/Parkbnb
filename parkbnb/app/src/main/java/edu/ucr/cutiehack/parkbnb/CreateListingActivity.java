@@ -118,7 +118,9 @@ public class CreateListingActivity extends AppCompatActivity implements OnMapRea
                 Address address = addressList.get(0);
                 currLocation = new LatLng(address.getLatitude(), address.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(currLocation).title("Add New Parking"));
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(currLocation));
+                float zoom = 10;
+                //mMap.animateCamera(CameraUpdateFactory.newLatLng(currLocation));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currLocation, zoom));
             }
             /*
             currLocation = new LatLng(address.getLatitude(), address.getLongitude());
