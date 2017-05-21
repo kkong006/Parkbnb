@@ -19,14 +19,22 @@ public class ParkingSpot {
         // Default constructor for DataSnapshot.getValue(ParkingSpot.class)
     }
 
-    public ParkingSpot(long id, String images, double lat, double lng, double price, double rate, boolean taken, String user) {
+    /*
+        public ParkingSpot(long id, String images, double lat, double lng, double price, double rate, boolean taken, String user) {
+            this.id = id;
+            this.images = images;
+            this.lat = lat;
+            this.lng = lng;
+            this.price = price;
+            this.rate = rate;
+            this.taken = taken;
+            this.user = user;
+        }
+        */
+    public ParkingSpot(long id, double price, String user) {
         this.id = id;
-        this.images = images;
-        this.lat = lat;
-        this.lng = lng;
         this.price = price;
-        this.rate = rate;
-        this.taken = taken;
         this.user = user;
     }
+
 }
