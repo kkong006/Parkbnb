@@ -1,9 +1,5 @@
 package edu.ucr.cutiehack.parkbnb;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -102,7 +98,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     Toast.makeText(Login.this, "User Logged In", Toast.LENGTH_SHORT).show();
                     finish();
                     //Redirects to the User Profile Activity
-                    startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                    startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 }else{
                     //Displays a login Unsuccessful message through Toast
                     Toast.makeText(Login.this, "Login Unsuccessful", Toast.LENGTH_SHORT).show();

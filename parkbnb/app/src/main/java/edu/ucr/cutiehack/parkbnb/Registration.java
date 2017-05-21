@@ -1,8 +1,5 @@
 package edu.ucr.cutiehack.parkbnb;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -104,7 +101,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(Registration.this, "User Registered", Toast.LENGTH_SHORT).show();
                     finish();
                     //Redirects to the User Profile Activity
-                    startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                    startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 }else{
                     //Displays a registration Unsuccessful message through Toast
                     Toast.makeText(Registration.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
