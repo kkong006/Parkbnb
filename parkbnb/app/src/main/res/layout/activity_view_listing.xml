@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.ucr.cutiehack.parkbnb.ViewListingActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_view_listing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_view_listing_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12pt"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_view_listing_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12pt"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="18dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bt_view_listing_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Parking Space"
+                android:textSize="10pt"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center"
+                android:padding="12dp"
+                android:layout_margin="18dp"
+                android:background="@color/colorAccent"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

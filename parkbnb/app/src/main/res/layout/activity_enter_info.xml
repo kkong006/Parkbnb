@@ -20,14 +20,16 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#ffffff"
-        android:hint="Price" />
+        android:hint="Price"
+        android:inputType = "number" />
 
     <EditText
         android:id="@+id/rateET"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#ffffff"
-        android:hint="Rate" />
+        android:hint="Rate"
+        android:inputType = "number" />
 
     <Button
         android:id="@+id/submitButton"

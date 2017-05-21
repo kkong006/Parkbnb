@@ -3,6 +3,7 @@ package edu.ucr.cutiehack.parkbnb;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class EnterInfo extends AppCompatActivity {
 
+    private static final String TAG = "EnterInfo";
+
     private EditText editTextName;
     private EditText editTextPrice;
     private EditText editTextRate;
@@ -29,6 +32,8 @@ public class EnterInfo extends AppCompatActivity {
     int spotNum = 100;
     private DatabaseReference ref;
     //ref = FirebaseDatabase.getInstance().getReference();
+
+    private ValueEventListener spotListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,23 +93,25 @@ public class EnterInfo extends AppCompatActivity {
     public void onSubmit() {
         ref = FirebaseDatabase.getInstance().getReference("spot");
 
-        ref.addValueEventListener(new ValueEventListener() {
+        spotListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
 
-                    String rate = editTextRate.getText().toString().trim();
-                    String price = editTextPrice.getText().toString().trim();
+                    String rate_s = editTextRate.getText().toString().trim();
+                    double rate = Double.parseDouble(rate_s);
+                    String price_s = editTextPrice.getText().toString().trim();
+                    double price = Double.parseDouble(price_s);
                     String strSpotNum = String.valueOf(spotNum);
                     //ParkingSpot currSpot = new ParkingSpot(spotNum, price);
                     ref.child(strSpotNum).child("price").setValue(price);
                     ref.child(strSpotNum).child("rate").setValue(rate);
                     ref.child(strSpotNum).child("taken").setValue(false);
-
+                    ref.child(strSpotNum).child("id").setValue(spotNum);
                     ref.child(strSpotNum).child("lat").setValue(lat);
                     ref.child(strSpotNum).child("lng").setValue(lng);
                     //databaseReference.child()
-                    Toast.makeText(getApplicationContext(), "Your entry has been saved!", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Your entry has been saved!", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -113,7 +120,22 @@ public class EnterInfo extends AppCompatActivity {
 
             }
 
-        });
+        };
+        ref.addValueEventListener(spotListener);
+    }
+
+    @Override
+    public void onBackPressed() {
+        ref.removeEventListener(spotListener);
+        Log.w(TAG, "removed event listener");
+        finish();
+    }
+
+    @Override
+    public void onPause() {
+        ref.removeEventListener(spotListener);
+        Log.w(TAG, "removed event listener");
+        super.onPause();
     }
 
 }
