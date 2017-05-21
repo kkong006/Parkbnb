@@ -123,7 +123,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
     private void jumpToLogin() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, SignInActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, Login.class));
         finish();
     }
 

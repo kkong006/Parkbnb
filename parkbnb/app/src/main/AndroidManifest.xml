@@ -17,17 +17,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Registration" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".CreateListingActivity" />
         <activity android:name=".ListingsMapActivity" />
         <activity android:name=".ViewListingActivity" />
-        <activity android:name=".SignInActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MenuActivity"
             android:label="@string/title_activity_welcome"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity android:name=".Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".RentorLogin"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".UserProfile"></activity>
     </application>
 
 </manifest>

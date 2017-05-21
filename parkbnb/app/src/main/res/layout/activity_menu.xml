@@ -14,6 +14,7 @@
 
 
         <Button
+            android:id="@+id/bt_rentor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rentor"
@@ -22,6 +23,7 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/bt_get"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
