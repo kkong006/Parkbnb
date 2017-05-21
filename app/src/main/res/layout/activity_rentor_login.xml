@@ -20,27 +20,27 @@
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
 
-            android:layout_above="@+id/Welcome"
+            android:layout_above="@+id/rentorWelcome"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:src="@mipmap/login_car" />
 
         <TextView
-            android:id="@+id/Welcome"
+            android:id="@+id/rentorWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editEmail"
+            android:layout_above="@+id/rentorEditEmail"
 
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginBottom="11dp"
-            android:text="User login" />
+            android:text="Rentor login" />
 
         <EditText
-            android:id="@+id/editEmail"
+            android:id="@+id/rentorEditEmail"
             android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editPassword"
+            android:layout_above="@+id/rentorEditPassword"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
@@ -50,11 +50,11 @@
 
 
         <EditText
-            android:id="@+id/editPassword"
+            android:id="@+id/rentorEditPassword"
             android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/loginButton"
-            android:layout_alignStart="@+id/editEmail"
+            android:layout_above="@+id/rentorLoginButton"
+            android:layout_alignStart="@+id/rentorEditEmail"
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
             android:gravity="center"
@@ -62,10 +62,10 @@
             android:paddingTop="30dp" />
 
         <Button
-            android:id="@+id/loginButton"
+            android:id="@+id/rentorLoginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/registerRedirect"
+            android:layout_above="@+id/rentorRegisterRedirect"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginBottom="18dp"
@@ -75,7 +75,7 @@
         <!--textColor-->
 
         <TextView
-            android:id="@+id/registerRedirect"
+            android:id="@+id/rentorRegisterRedirect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

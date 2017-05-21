@@ -17,12 +17,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Registration extends AppCompatActivity implements View.OnClickListener{
+public class RentorLogin extends AppCompatActivity implements View.OnClickListener{
 
     private EditText editEmail;
     private EditText editPassword;
-    private Button registerButton;
-    private TextView loginRedirect;
+    private Button loginButton;
+    private TextView registerRedirect;
 
     private ProgressDialog progressDialog;
 
@@ -31,8 +31,8 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
 
-        setContentView(R.layout.activity_registration);
         //Initialization of the FirebaseAuth Object
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -47,20 +47,20 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         progressDialog = new ProgressDialog(this);
 
         //Retrieving EditText field values from the XML and storing them in java Variables
-        editEmail = (EditText) findViewById(R.id.editEmail);
-        editPassword = (EditText) findViewById(R.id.editPassword);
+        editEmail = (EditText) findViewById(R.id.rentorEditEmail);
+        editPassword = (EditText) findViewById(R.id.rentorEditPassword);
 
-        registerButton = (Button) findViewById(R.id.registerButton);
+        loginButton = (Button) findViewById(R.id.rentorLoginButton);
 
-        loginRedirect = (TextView) findViewById(R.id.loginRedirect);
+        registerRedirect = (TextView) findViewById(R.id.rentorRegisterRedirect);
 
-        //Adding the listener function to both the register button and the login redirection link (Text)
-        registerButton.setOnClickListener(this);
-        loginRedirect.setOnClickListener(this);
+        //Adding the listener function to both the login button and the register redirection link (Text)
+        loginButton.setOnClickListener(this);
+        registerRedirect.setOnClickListener(this);
 
     }
 
-    private void registerNewUser() {
+    private void loginUser() {
 
         //Converting EditText type variables to String type variables
         String email = editEmail.getText().toString().trim();
@@ -87,48 +87,49 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
          *
          * @param email user email
          * @param password user password
-        ref.child("users").child(authData.uid).set({
-        provider: authData.provider,
-        name: userName
          */
-        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressDialog.dismiss();
-                //checks whether the user has been successfully registered
+                //checks whether the user has been successfully logged in
                 if(task.isSuccessful()){
-                    //Displays a registration successful message through Toast
-                    Toast.makeText(Registration.this, "User Registered", Toast.LENGTH_SHORT).show();
-                        finish();
+                    //Displays a login successful message through Toast
+                    Toast.makeText(RentorLogin.this, "User Logged In", Toast.LENGTH_SHORT).show();
+                    finish();
                     //Redirects to the User Profile Activity
-                        startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                    startActivity(new Intent(getApplicationContext(), UserProfile.class));
                 }else{
-                    //Displays a registration Unsuccessful message through Toast
-                    Toast.makeText(Registration.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
+                    //Displays a login Unsuccessful message through Toast
+                    Toast.makeText(RentorLogin.this, "Login Unsuccessful", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+
+
     }
 
-    //Method to switch from Registration page to the Login Page
-    private void redirectToLogin(){
+    //Method to switch from Login page to the Registration Page
+    private void redirectToRegister() {
         finish();
-        //starts the Login Activity
-        startActivity(new Intent(this, Login.class));
+        //starts the Registration Activity
+        startActivity(new Intent(this, Registration.class));
     }
 
     @Override
     public void onClick(View view) {
-        //when registerButton is clicked registerNewUser method is invoked
-        if(view == registerButton){
-            registerNewUser();
+
+        //when loginButton is clicked loginUser method is invoked
+        if(view == loginButton){
+            loginUser();
         }
 
-        //when loginRedirect button is clicked redirectToLogin method is invoked
-        if(view == loginRedirect){
-            redirectToLogin();
+        //when registerRedirect is clicked redirectToRegister method is invoked
+        if(view == registerRedirect){
+            redirectToRegister();
         }
 
     }
+
 }
