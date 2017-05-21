@@ -3,6 +3,7 @@
     package="edu.ucr.cutiehack.parkbnb">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,6 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCLiY_qIswg40qE9OMJ1NxLlii6sgm5aSg" />
+
         <activity android:name=".Registration" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".CreateListingActivity" />
@@ -32,7 +38,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".RentorLogin"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".UserProfile" />
+        <activity android:name=".EnterInfo"></activity>
     </application>
 
 </manifest>
